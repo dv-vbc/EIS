@@ -8,4 +8,12 @@
     </parent>
     <artifactId>fw-vo-eis-tax</artifactId>
     <packaging>jar</packaging>
+    
+    <dependencies>
+        
+        <dependency>
+            <groupId>net.idealclover.java</groupId>
+            <artifactId>fw-ws-com-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -21,6 +21,12 @@
 
     <dependencies>
         <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>fw-ws-eis-tax</artifactId>
+            <version>${project.version}</version>
+            <type>aar</type>
+        </dependency>
+        <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-web-api</artifactId>
             <version>6.0</version>
@@ -150,12 +156,6 @@
                     <artifactId>jmxtools</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>fw-ws-eis-tax</artifactId>
-            <version>${project.version}</version>
-            <type>aar</type>
         </dependency>
     </dependencies>
 

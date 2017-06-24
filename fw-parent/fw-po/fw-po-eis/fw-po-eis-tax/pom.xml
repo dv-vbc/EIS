@@ -8,4 +8,10 @@
     </parent>
     <artifactId>fw-po-eis-tax</artifactId>
     <packaging>jar</packaging>
+    <dependencies>
+        <dependency>
+            <groupId>net.idealclover.java</groupId>
+            <artifactId>fw-po-com-core</artifactId>
+        </dependency>
+    </dependencies>
 </project>

@@ -32,9 +32,8 @@
             <artifactId>log4j</artifactId>
         </dependency>
         <dependency>
-            <groupId>${project.groupId}</groupId>
+            <groupId>net.idealclover.java</groupId>
             <artifactId>fw-svc-com-core</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <!--
         <dependency>
