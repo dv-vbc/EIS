@@ -7,6 +7,7 @@
 package net.idealclover.java.fw.ws.eis.tax;
 
 import net.idealclover.java.fw.svc.eis.tax.ITaxService;
+import net.idealclover.java.fw.vo.eis.tax.UserVo;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,6 +46,22 @@ public class TaxServiceSkeleton {
             throw new RuntimeException(e);
         }
         logger.info("发送信息：" + resultXml);
+        return resultXml;
+    }
+    
+    public String getUser(String xml) {
+        String resultXml = "";
+        logger.info("服务接口：TaxService#checkConnect");
+        logger.info("接收信息：" + xml);
+        try {
+            UserVo vo = new UserVo();
+            vo.setAccount(xml);
+            vo = taxService.getUser(vo);
+            resultXml = "<xml><account>"+vo.getAccount()+"</account><password>"+vo.getPassword()+"</password><xml>";
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+        logger.info("返回信息：" + resultXml);
         return resultXml;
     }
 

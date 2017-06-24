@@ -10,9 +10,14 @@
     <packaging>jar</packaging>
     
     <dependencies>
-         <dependency>
+        <dependency>
             <groupId>net.idealclover.java</groupId>
             <artifactId>fw-dao-com-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>fw-po-eis-tax</artifactId>
+            <version>${project.version}</version>
         </dependency>
     </dependencies>
 </project>

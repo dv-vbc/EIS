@@ -18,11 +18,15 @@
         <dependency>
             <groupId>net.idealclover.java</groupId>
             <artifactId>fw-ws-com-core</artifactId>
-            <version>${project.version}</version>
         </dependency>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>fw-svc-eis-tax</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>${project.groupId}</groupId>
+            <artifactId>fw-vo-eis-tax</artifactId>
             <version>${project.version}</version>
         </dependency>
         <dependency>

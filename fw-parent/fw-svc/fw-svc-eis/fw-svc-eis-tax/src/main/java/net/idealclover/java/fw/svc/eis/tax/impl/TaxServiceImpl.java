@@ -1,7 +1,10 @@
 package net.idealclover.java.fw.svc.eis.tax.impl;
 
 import javax.xml.namespace.QName;
+import net.idealclover.java.fw.dao.eis.tax.ITUserMapper;
+import net.idealclover.java.fw.po.eis.tax.TUser;
 import net.idealclover.java.fw.svc.eis.tax.ITaxService;
+import net.idealclover.java.fw.vo.eis.tax.UserVo;
 
 import org.apache.axis2.addressing.EndpointReference;
 import org.apache.axis2.client.Options;
@@ -9,6 +12,7 @@ import org.apache.axis2.rpc.client.RPCServiceClient;
 import org.apache.axis2.transport.http.HTTPConstants;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -17,6 +21,9 @@ import org.springframework.util.StringUtils;
 public class TaxServiceImpl implements ITaxService {
 
     private static Log logger = LogFactory.getLog(TaxServiceImpl.class);
+    
+    @Autowired
+    private ITUserMapper tuserMapper;
 
 //	@Autowired
 //	private TaxConfig taxConfig;
@@ -57,6 +64,15 @@ public class TaxServiceImpl implements ITaxService {
         }
 
         return "";
+    }
+    
+    @Override
+    public UserVo getUser(UserVo vo) {
+        String account = vo.getAccount();
+        TUser po = tuserMapper.findByAccount(account);
+        vo.setAccount(po.getAccount());
+        vo.setPassword(po.getPassword());
+        return vo;
     }
 
     /*private OorgDao oorgDao;

@@ -1,9 +1,13 @@
 package net.idealclover.java.fw.svc.eis.tax;
 
+import net.idealclover.java.fw.vo.eis.tax.UserVo;
+
 
 public interface ITaxService {
 	
 	public String checkConnect(String xml);
+        
+        public UserVo getUser(UserVo vo);
 	
 /*	*//**-------------------------------------------------------------------------
 	 * 营销系统发起调用 税控系统提供服务

@@ -13,7 +13,7 @@
         
         <dependency>
             <groupId>net.idealclover.java</groupId>
-            <artifactId>fw-ws-com-core</artifactId>
+            <artifactId>fw-vo-com-core</artifactId>
         </dependency>
     </dependencies>
 </project>
