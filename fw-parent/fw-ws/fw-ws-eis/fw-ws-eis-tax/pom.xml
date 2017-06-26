@@ -4,7 +4,7 @@
     <parent>
         <groupId>net.idealclover.java</groupId>
         <artifactId>fw-ws-eis</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.1</version>
     </parent>
     <artifactId>fw-ws-eis-tax</artifactId>
     <packaging>aar</packaging>
